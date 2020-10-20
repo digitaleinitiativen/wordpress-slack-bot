@@ -1,0 +1,36 @@
+/* functions.php (wp-admin/theme-editor.php?file=functions.php&theme=generatepress) */
+function custom_add_google_fonts() {
+ 	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css2?family=Share+Tech', false );
+}
+add_action( 'wp_enqueue_scripts', 'custom_add_google_fonts' );
+
+/* Additional CSS(wp-admin/customize.php?autofocus%5Bsection%5D=custom_css) */
+.wp-block-pullquote p {
+	font-family: 'Share Tech', sans-serif;
+}
+
+input,
+input:focus,
+select,
+select:focus,
+textarea,
+textarea:focus,
+input[type="text"],
+input[type="text"]:focus,
+input[type="tel"],
+input[type="tel"]:focus,
+input[type="email"],
+input[type="email"]:focus {
+	background:#fd0;
+	border:2px solid black;
+	color:#000;
+}
+.wpcf7-response-output {
+	border-color: black !important;
+}
+
+input[type="checkbox"]{
+    outline:2px solid black;
+    outline-offset: -2px;
+		filter: grayscale(1)
+}
