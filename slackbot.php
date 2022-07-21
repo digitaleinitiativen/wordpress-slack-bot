@@ -15,8 +15,8 @@ function transitionPostFunction( $new_status, $old_status, $post ) {
     }
 }
 
-function sendSlack($post_id){	
-	if(!(get_post_type($post_id) == 'post' || get_post_type($post_id) == 'page')) return;
+function sendSlack($post_id){
+	if(get_post_type($post_id) != 'post') return;
 	
 	// send slack messages to the #bots-testfield channel instead of general
 	$testChannel = false;
